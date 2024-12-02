@@ -1,0 +1,97 @@
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 5px 20px; /* Reduced padding for smaller navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 50px; /* Smaller height for navbar */
+  }
+  
+  /* Logo Styling */
+  .navbar .logo {
+    font-size: 1.2rem; /* Reduced logo size */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Navigation Links Styling */
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* Reduced gap between links */
+  }
+  
+  .navbar .nav-links li {
+    display: inline-block;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem; /* Smaller font size for links */
+    font-weight: 400; /* Lighter font weight */
+    padding: 5px 10px; /* Smaller padding for links */
+    transition: all 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    background-color: #ff5e00;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20px; /* Smaller hamburger icon */
+    height: 15px;
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  /* Mobile Menu */
+  @media (max-width: 768px) {
+    /* Hide nav links by default on mobile */
+    .navbar .nav-links {
+      position: absolute;
+      top: 50px; /* Adjusted top position to match smaller navbar */
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #333;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+  
+    /* Show mobile menu when toggled */
+    .navbar .nav-links.mobile {
+      display: flex;
+    }
+  
+    .navbar .nav-links a {
+      font-size: 1rem; /* Slightly bigger font size for readability on mobile */
+      margin: 10px 0;
+    }
+  
+    /* Show the hamburger menu on mobile */
+    .hamburger {
+      display: flex;
+    }
+  }
+  
